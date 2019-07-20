@@ -18,7 +18,6 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $base-font-size;
-  margin: 0 0 rem($base-font-size);
 }
 h1,
 h2 {
@@ -83,6 +82,12 @@ picture {
   max-width: 100%;
 }
 
-code {
-
+.post-content {
+  & > h2,
+  & > h3 {
+    margin: $base-spacing 0;
+  }
+  & > p {
+    margin: $base-font-size 0;
+  }
 }
