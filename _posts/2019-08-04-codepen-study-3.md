@@ -130,7 +130,7 @@ input[type=checkbox].switch {
 }
 ```
 
-![appearance: none 화면](/assets/post_image/imgs-jina/20190804/2.png) ![display: none 화면](/assets/post_image/imgs-jina/20190804/3.png)
+![appearance와 display의 차이](/assets/post_image/imgs-jina/20190804/2.png)
 > appearance: none 을 적용했을 때 화면과 display: none 을 적용했을 때 화면
 
 
@@ -202,7 +202,7 @@ section {
 }
 ```
 
-![inline-block left-align issue](/assets/post_image/imgs-jina/20190804/4.png) ![float으로 해결했을 때 화면](/assets/post_image/imgs-jina/20190804/5.png)
+![inline-block left-align issue](/assets/post_image/imgs-jina/20190804/3.png)
 > inline-block 요소가 left-align 되어있을 때 의도치않은 margin이 생기는 이슈가 있다. 퍼블리싱할 때 자주 등장하는 이슈다. float: left로 해결하면 위쪽 마진이 맞는다.
 
 ### 2-4. CSS - 트랜지션
@@ -229,7 +229,7 @@ input[type=checkbox].switch:active:after {
 
 모션을 세부적으로 조정하고 싶을 때가 있는데, cubic bezior 숫자를 일일이 조정하는건 직관적이지 않아서 불편하다. chrome inspector에서 제공하는 그래프 기능을 이용하는게 편하다. 모션 베지어 그래프 말고도 shadow 수치, rgba 값 등 다양한 수치를 직관적으로 확인할 수 있다. 다른 브라우저의 inspector에서도 이런 기능을 제공하는지는 잘 모르겠다.
 
-![inspector transition graph-custom](/assets/post_image/imgs-jina/20190804/6.png)
+![inspector transition graph-custom](/assets/post_image/imgs-jina/20190804/4.png)
 > inspector에서 직관적으로 모션을 보고, 수정할 수 있다.
 
 ----
@@ -259,7 +259,7 @@ input[type=checkbox].switch:checked:after {
 }
 ```
 
-![darkmode1](/assets/post_image/imgs-jina/20190804/7.png)
+![darkmode1](/assets/post_image/imgs-jina/20190804/5.png)
 > 어두운 모드일 때 이런 화면이 나온다고 친다. 아직은 반영이 안된다.
 
 ----
@@ -285,7 +285,7 @@ function checkActive(){
 toggleSwitch.addEventListener('click', checkActive(), false);
 ```
 
-![click 이벤트가 의도와 다르게 적용된 화면](/assets/post_image/imgs-jina/20190804/8.png)
+![click 이벤트가 의도와 다르게 적용된 화면](/assets/post_image/imgs-jina/20190804/6.png)
 > 처음 들어가자마자 스위치는 밝은모드, 나머지는 어두운모드로 보인다. 클릭하지 않았는데도 콘솔에 'checked'가 뜬다. 어디가 잘못 되었을까?
 
 이벤트리스너 문제인가 싶어서 구문을 삭제하고 HTML에 `onClick` 속성을 추가했다. 
@@ -294,7 +294,7 @@ toggleSwitch.addEventListener('click', checkActive(), false);
 <input type="checkbox" onClick="checkActive()" class="switch">
 ```
 
-![밝은모드 화면](/assets/post_image/imgs-jina/20190804/9.png) ![어두운모드 화면](/assets/post_image/imgs-jina/20190804/10.png)
+![토글 스위치 작동 완료](/assets/post_image/imgs-jina/20190804/7.png)
 > 잘 동작한다!
 
 최종 결과물은 [**이 링크**](https://eojin-lee.github.io/CodepenStudy/20190804/darkmode_toggle.html)로 들어가면 볼 수 있다.
