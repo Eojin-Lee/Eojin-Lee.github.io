@@ -5,7 +5,7 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   letter-spacing: 0.005em;
-  word-spacing: 0.01em;
+  word-spacing: 0.04em;
 }
 
 h1,
@@ -21,7 +21,7 @@ h6 {
 }
 h1,
 h2 {
-  letter-spacing: 0.02em;
+  letter-spacing: 0.012em;
 }
 h1 {
 	font-size: modular-scale(4);
@@ -55,7 +55,7 @@ a {
   &:focus,
   &:hover {
     color: $action-color;
-    transition: color 0.1s linear;
+    transition: color 0.3s;
   }
 
   &:active,
@@ -65,7 +65,7 @@ a {
 }
 
 p > a {
-  border-bottom: 0.1em solid $action-color;
+  border-bottom: 0.12em solid $action-color;
 }
 
 hr {
@@ -76,16 +76,22 @@ hr {
   margin: $base-spacing 0;
 }
 
+blockquote {
+  margin-inline-start: 0;
+  padding-left: $base-spacing;
+  border-left: 2px solid $light-gray;
+}
+
 img,
 picture {
-  margin: 0;
+  margin: $base-spacing 0 0 0;
   max-width: 100%;
 }
 
 .post-content {
   & > h2,
   & > h3 {
-    margin: $base-spacing 0;
+    margin: $big-spacing 0 $small-spacing 0;
   }
   & > p {
     margin: $base-font-size 0;

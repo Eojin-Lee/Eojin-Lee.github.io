@@ -90,7 +90,7 @@ pre code.hljs {
 		padding: 4em 1em 2em 1em;
 		&.has-cover {
 			background-color: rgba(0,0,0,0.2);
-			padding: 4em 1em 2em 1em !important;
+			padding: 4em 1em 3.2em 1em !important;
 			@include media($tablet) {
 				padding: 5em 1em 3em 1em !important;
 			}
@@ -207,7 +207,16 @@ pre code.hljs {
 		padding-top: 1em !important;
 		@extend %default-ul;
 		.post-tags {
-			font-size: modular-scale(1);
+			font-weight: 400;
+			font-size: 0.92em;
+			color: $medium-gray;
+			a {
+				font-weight: 400;
+				color: $medium-gray;
+			}
+			a:hover {
+				color: $dark-gray;;
+			}
 		}
 		h2 {
 			font-size: modular-scale(2);
@@ -220,14 +229,17 @@ pre code.hljs {
 		.post-date {
 			@include span-columns(6);
 			text-align: left;
-			font-size: 0.9em;
+			font-size: 0.92em;
 		}
 		.post-author {
 			@include span-columns(6);
 			text-align: right;
-			font-size: 0.9em;
+			font-size: 0.92em;
 			a {
 				color: $medium-gray;
+			}
+			a:hover {
+				color: $dark-gray;;
 			}
 		}
 	}
@@ -248,6 +260,7 @@ pre code.hljs {
 		.site-header{
 			.title {
 				font-size: modular-scale(5);
+				margin-bottom: 8px;
 			}
 		}
 	}
