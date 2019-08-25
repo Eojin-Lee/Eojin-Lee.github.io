@@ -4,7 +4,7 @@
 *	Variables
 */
 $b3: 480px;
-$tablet: $b3;
+$mobile: $b3;
 $b2: 768px;
 $tablet: $b2;
 $b1: 960px;
@@ -98,12 +98,12 @@ pre code.hljs {
 		}
 	}
 	.scrim {
-		padding: 3.12em 0 2.46em;
+		padding: 3.12em 1.18em 2.46em;
 		&.has-cover {
 			background-color: rgba(0,0,0,0.2);
-			padding: 3.12em 0 2.46em !important;
+			padding: 3.12em 1.18em 2.46em !important;
 			@include media($tablet) {
-				padding: 3.12em 0 2.46em !important;
+				padding: 3.12em 1.18em 2.46em !important;
 			}
 		}
 	}
@@ -114,7 +114,6 @@ pre code.hljs {
 */
 .navigation {
 	box-shadow: 0 2px $highlight-color;
-	padding: 0 1em;
 	margin: 0;
 	/*
 	*	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
@@ -134,14 +133,12 @@ pre code.hljs {
   .navigation-wrapper {
   	@include outer-container;
     @include clearfix;
-    position: relative;
+	position: relative;
+	padding: 0 1.18em;
   }
   .logo {
     float: left;
     height: 4em;
-    @include media ($tablet) {
-    	padding-left: $em-base;
-    }
     img {
       max-height: 2.5em;
       margin-top: 0.75em;
@@ -197,7 +194,7 @@ pre code.hljs {
 	  }
 	&:last-child a {
 	  	@include media ($tablet) {
-    		padding-right: 1em;
+    		padding-right: 0;
     	}
     }
   }
@@ -209,16 +206,16 @@ pre code.hljs {
 .page-content {
 	.wrapper {
 		@include outer-container;
-		padding: 1em 1.7em;
+		padding: 1em 1.18em;
 	}
 	/*
 	*	index.html
 	*/
 	.post-list {
-		padding-top: 1.12em !important;
+		padding-top: 1.46em !important;
 		@extend %default-ul;
 		h2 {
-			margin: 0.38em 0;
+			margin: 0.34em 0;
 			font-size: modular-scale(2);
 		}
 		.post-meta {
@@ -230,11 +227,13 @@ pre code.hljs {
 				color: $medium-gray;
 				width: auto;
 			}
-			.meta-left {
-				float: left;
-			}
 			.meta-right {
-				float: right;
+				float: none;
+				margin-top: 0.12em;
+				@include media ($tablet) {
+					float: right;	
+					margin-top: 0;
+				}
 			}
 			.post-tags > a {
 				font-weight: 400;
@@ -255,7 +254,7 @@ pre code.hljs {
 		}	
 	}
 	.pagination {
-		padding-top: 2em;
+		padding: 2.56em 0 0.46em;
 		text-align: center;
 		color: $medium-gray;
 		.page-number {
@@ -270,8 +269,13 @@ pre code.hljs {
 		background-color: $highlight-color;
 		.site-header{
 			.title {
-				font-size: modular-scale(5);
+				line-height: 1.34em;
+				font-size: modular-scale(4);
 				margin-bottom: 0;
+				@include media ($tablet) {
+					line-height: 1.56em;
+					font-size: modular-scale(5);
+				}
 			}
 		}
 	}
@@ -292,7 +296,7 @@ pre code.hljs {
 		}
 		.post-header-container {
 			.scrim {
-				padding: 3.46em 0 1.82em;
+				padding: 3.46em 1.18em 1.82em;
 			}
 		}
 		.post-meta {
@@ -326,18 +330,42 @@ pre code.hljs {
 			font-size: 0.9em;
 			display: block;
 			width: auto;
-			.prev-post {
+			.prev-post, .next-post {
 				display: block;
-				width: 50%;
-				float: left;
+				width: 40%;
 				margin: 1em 0;
+				@include media ($tablet) {
+					width: 48%;
+				}
+			}
+			.prev-post {
+				float: left;
+				a {
+					display: flex;
+					flex-direction: column;
+					@include media ($tablet) {
+						display: block;
+					}
+				}
 			}
 			.next-post {
-				display: block;
-				width: 50%;
-				float: left;
-				margin: 1em 0;
+				float: right;
 				text-align: right;
+				a {
+					display: flex;
+					flex-direction: column-reverse;
+					@include media ($tablet) {
+						display: block;
+					}
+				}
+				a > span:last-child {
+					margin-right: 0;
+					margin-left: auto;
+				}
+			}
+			.page-number {
+				display: inline-block;
+				margin-top: 0.56em;
 			}
 		}
 	}
