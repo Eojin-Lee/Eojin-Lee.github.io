@@ -184,7 +184,7 @@ pre code.hljs {
 	      padding-right: 1.5em;
 	    }
 	  }
-	  &:last-child a {
+	&:last-child a {
 	  	@include media ($tablet) {
     		padding-right: 1em;
     	}
@@ -209,37 +209,38 @@ pre code.hljs {
 		h2 {
 			font-size: modular-scale(2);
 		}
-	}
-	.post-meta {
-		@include outer-container;
-		// padding: 1em 0;
-		font-weight: 400;
-		font-size: 0.92em;
-		color: $medium-gray;
-		.post-tags {
-			float: left;
-			width: auto;
-			a {
+		.post-meta {
+			@include outer-container;
+			// padding: 1em 0;
+			span {
+				font-weight: 400;
+				font-size: 0.92em;
+				color: $medium-gray;
+				width: auto;
+			}
+			.meta-left {
+				float: left;
+			}
+			.meta-right {
+				float: right;
+			}
+			.post-tags > a {
 				font-weight: 400;
 				color: $medium-gray;
+				&:hover {
+					color: $dark-gray;
+				}
 			}
-			a:hover {
-				color: $dark-gray;;
+			.post-date { 
+				margin-left: $em-base;
 			}
-		}
-		.post-date, .post-author {
-			float: right;
-			text-align: right;
-			margin-left: $em-base;
-		}
-		.post-author {
-			a {
+			.post-author > a {
 				color: $medium-gray;
+				&:hover {
+					color: $dark-gray;
+				}
 			}
-			a:hover {
-				color: $dark-gray;;
-			}
-		}
+		}	
 	}
 	.pagination {
 		padding-top: 2em;
