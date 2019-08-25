@@ -74,25 +74,36 @@ pre code.hljs {
 	text-align: center;
 	.subtitle, .info {
 		font-size: modular-scale(1);
+		color: $medium-gray;
+		a {
+			color: $medium-gray;
+			text-decoration: none;
+			&:hover {
+				color: $dark-gray;
+			}
+		}
 	}
 	&.has-cover {
 		color: $white;
 		background-position: 50% 50%;
 		background-size: cover;
 		.subtitle, .info {
-			a{
-				color: $white;
+			a {
+				color: $snow-white;
 				text-decoration: none;
+				&:hover {
+					color: $white;
+				}
 			}
 		}
 	}
 	.scrim {
-		padding: 4em 1em 2em 1em;
+		padding: 3.12em 0 2.46em;
 		&.has-cover {
 			background-color: rgba(0,0,0,0.2);
-			padding: 4em 1em 3.2em 1em !important;
+			padding: 3.12em 0 2.46em !important;
 			@include media($tablet) {
-				padding: 5em 1em 3em 1em !important;
+				padding: 3.12em 0 2.46em !important;
 			}
 		}
 	}
@@ -204,9 +215,10 @@ pre code.hljs {
 	*	index.html
 	*/
 	.post-list {
-		padding-top: 1em !important;
+		padding-top: 1.12em !important;
 		@extend %default-ul;
 		h2 {
+			margin: 0.38em 0;
 			font-size: modular-scale(2);
 		}
 		.post-meta {
@@ -231,8 +243,8 @@ pre code.hljs {
 					color: $dark-gray;
 				}
 			}
-			.post-date { 
-				margin-left: $em-base;
+			.post-author { 
+				margin-right: $em-base;
 			}
 			.post-author > a {
 				color: $medium-gray;
@@ -259,7 +271,7 @@ pre code.hljs {
 		.site-header{
 			.title {
 				font-size: modular-scale(5);
-				margin-bottom: 8px;
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -280,7 +292,7 @@ pre code.hljs {
 		}
 		.post-header-container {
 			.scrim {
-				padding: 2em 1em 1em 1em;
+				padding: 3.46em 0 1.82em;
 			}
 		}
 		.post-meta {

@@ -21,6 +21,7 @@ h6 {
 }
 h1,
 h2 {
+  line-height: 1.56em;
   letter-spacing: 0.012em;
 }
 h1 {
@@ -73,7 +74,7 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-spacing 0;
+  margin: $em-base * 1.12 0 $base-spacing * 1.12;
 }
 
 blockquote {

@@ -13,20 +13,21 @@ $base-font-size: 18px;
 $modular-scale-ratio: $minor-third;
 
 // Line height
-$base-line-height: 1.82;
-$heading-line-height: 1.82;
+$base-line-height: 1.8;
+$heading-line-height: 1.8;
 
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * $em-base;
 $small-spacing: $base-spacing / 2;
-$big-spacing: $base-spacing * 1.82;
+$big-spacing: $base-spacing * 1.56;
 $base-z-index: 0;
 
 // Colors
 $dark-gray: #232323;
 $medium-gray: #767676;
 $light-gray: #ddd;
+$snow-white: #f2f2f2;
 $white: #fff;
 // Flat UI Colors. For more, see http://flatuicolors.com/
 $turquoise: #1abc9c;	// Turqoise
