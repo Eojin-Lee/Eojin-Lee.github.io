@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  [자바스크립트] 객체
+title:  자바스크립트 객체
 date: 2019-08-31
-tags: javascript
+tags: javascript, object
 authors: eojinlee
 ---
 
